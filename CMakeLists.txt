@@ -6,11 +6,11 @@ set(CMAKE_CXX_STANDARD 14)
 include_directories(headers)
 
 add_executable(RPSGame
-        include/header/Bot.hpp
-        include/header/Game.hpp
-        include/header/Main.hpp
-        include/header/Players.hpp
-        include/header/User_Player.hpp
+        include/Bot.hpp
+        include/Game.hpp
+        include/Main.hpp
+        include/Players.hpp
+        include/User_Player.hpp
         source/Bot.c++
         source/Game.c++
         source/Players.c++

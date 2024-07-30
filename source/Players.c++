@@ -6,7 +6,7 @@
 #include<iomanip>
 
 using namespace std;
-#include "../include/header/Players.hpp"
+#include "../include/Players.hpp"
 // rock = 1 paper = 2 scissor = 3
 
 

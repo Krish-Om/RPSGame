@@ -2,7 +2,7 @@
 #include <csignal>
 
 using namespace std;
-#include "../include/header/Bot.hpp"
+#include "../include/Bot.hpp"
 
 
 void Bot::setChoice()

@@ -9,7 +9,5 @@ public:
     Bot();
     void setChoice() override;
     ~Bot() override;
-
-    void setScore();
 };
 #endif //GAME_BOT_HPP
