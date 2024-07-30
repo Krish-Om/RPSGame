@@ -2,7 +2,7 @@
 #include <csignal>
 
 using namespace std;
-#include "Bot.hpp"
+#include "../include/header/Bot.hpp"
 
 
 void Bot::setChoice()
@@ -27,9 +27,6 @@ void Bot::setChoice()
     }
 }
 
-void Bot::setScore() {
-    this->score++;
-}
-
 Bot::Bot() = default;
 Bot :: ~Bot()= default;
+

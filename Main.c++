@@ -1,6 +1,6 @@
-#include "Game.hpp"
 
-using namespace std;
+#include "include/header/Game.hpp"
+
 int main()
 {
     start();

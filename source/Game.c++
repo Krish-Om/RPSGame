@@ -1,6 +1,6 @@
 #include <iostream>
 #include "unistd.h"
-#include "Game.hpp"
+#include "../include/header/Game.hpp"
 
 
 using namespace std;
