@@ -1,10 +1,11 @@
 # Prerequisites
 *.d
+.idea
 
 # CMake build directories
 cmake-build-debug/
 build/
-
+cmake-build-debug-event-trace/
 # Compiled Object files
 *.slo
 *.lo
