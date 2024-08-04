@@ -148,10 +148,10 @@ void Game::startGame(User_Player &p1, User_Player &p2) {
 
         int result = p1.compare(p2);
         User_Player :: roundWinner(result, i,p1,p2);
-        scoreBoard(p1, p2);
     }
 
     determineWinner(p1,p2);
+    scoreBoard(p1, p2);
     this->Outro(i);
 }
 
@@ -165,9 +165,9 @@ void Game::startGame() {
 
         int result = player.compare(bot);
         Game::roundWinner(result, i);
-        scoreBoard(player, bot);
     }
     determineWinner(player, bot);
+    scoreBoard(player, bot);
     this->Outro(i);
 }
 
