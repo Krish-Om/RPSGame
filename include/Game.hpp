@@ -6,7 +6,8 @@
 
 #include "User_Player.hpp"
 #include "Bot.hpp"
-
+#include "fstream"
+#include "utils.hpp"
 void clearScreen();
 void scoreBoard(User_Player&, User_Player&);
 void scoreBoard(User_Player&, Bot&);

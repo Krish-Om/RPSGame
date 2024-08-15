@@ -15,4 +15,7 @@ add_executable(RPSGame
         source/Game.c++
         source/Players.c++
         source/User_Player.c++
-        Main.c++)
+        Main.c++
+        source/utils.cpp
+        include/utils.hpp
+)

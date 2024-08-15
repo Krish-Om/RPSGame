@@ -1,67 +1,26 @@
 #include <iostream>
-#include "unistd.h"
+
 #include "../include/Game.hpp"
-
-
+#include "../include/utils.hpp"
 using namespace std;
 
-//helper functions
-void start(){
-    system("clear");
-    clearScreen();
-    intro();
-    Game g;
-}
-void clearScreen() {
-    if (isatty(STDOUT_FILENO)) {
-        system("clear || cls");
-    } else {
-        cerr << " No terminal detected " << endl;
-    }
-}
-void intro(){
-    clearScreen();
-    cout << "💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥\n" << endl;
-    cout << "\aWelcome to exciting CLI RPS game:\a " << endl;
-    cout << "\n💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥\n" << endl;
-}
-void scoreBoard(User_Player& p1, User_Player& p2) {
-    cout << "\n\nPlayer 1 Score : " << p1.getScore() << endl;
-    cout << "\n\nPlayer 2 Score : " << p2.getScore() << endl;
-}
-void comparingScores() {
-    cout << "Comparing scores";
-    cout.flush(); // Ensure the initial message is printed immediately
-
-    for (int i = 0; i < 10; ++i) { // Adjust the loop count for desired loading bar length
-        usleep(300000); // 300 milliseconds delay
-        cout << ".";
-        cout.flush(); // Ensure each dot is printed immediately
-    }
-
-    clearScreen();
-}
-void scoreBoard(User_Player& p1, Bot& p2) {
-    cout << "\n\nPlayer Score : " << p1.getScore() << endl;
-    cout << "\n\nBot Score : " << p2.getScore() << endl;
-}
 void Game :: roundWinner(int res, int nround) {
     if (res == 0){
         cout << "\n\n\n\n";
         cout << " 😅 Round " << nround + 1 << ": is Draw!" << endl;
-        cout << "\n\n\n\n";
+        cout << "\n";
         
     }
     else if (res == 1) {
         cout << "\n\n\n\n";
         ++player;
         cout << "🤩 Round " << nround + 1 << ": you won!" << endl;
-        cout << "\n\n\n\n";
+        cout << "\n";
     }else{
         cout << "\n\n\n\n";
         ++bot;
         cout << "🥲 Round " << nround + 1 << ": you lose!" << endl;
-        cout << "\n\n\n\n";
+        cout << "\n";
     }
 }
 
@@ -204,41 +163,37 @@ void Game::playAgain() {
 
 void Game::determineWinner(User_Player player, Bot bot) {
     comparingScores();
+
     if ((player == bot)){
 
-        cout << "\n\n\n\n";
-        cout << "\n\n \t🙃🙃🙃 It's a draw! 🙃🙃🙃 \n\n" << endl;
-        cout << "\n\n\n\n";
+        cout << "\n\n";
+        cout << "\t🙃🙃🙃 It's a draw! 🙃🙃🙃 \n\n" << endl;
 
     }
     else if (player.getScore() > bot.getScore()) {
-        cout << "\n\n\n\n";
-        cout << "\n\n 🥳🥳🥳 Player wins! 🥳🥳🥳\n\n " << endl;
-        cout << "\n\n\n\n";
+        cout << "\n\n";
+        cout << " 🥳🥳🥳 Player wins! 🥳🥳🥳\n\n " << endl;
 
     } else {
-        cout << "\n\n\n\n";
-        cout << "\n\n\n 😎 🤖😎 Bot wins! 🤖😎🤖 \n\n\n " << endl;
-        cout << "\n\n\n\n";
-
+        cout << "\n\n";
+        cout << " 😎 🤖😎 Bot wins! 🤖😎🤖 \n\n " << endl;
     }
+
+    //Logging the scores
+    writeScores( "Player", player.getScore(), "Bot", bot.getScore());
+
 }
 void Game::determineWinner(User_Player player1, User_Player player2) {
     comparingScores();
     if (player1== player2){
-        cout << "\n\n\n\n";
         cout << " \n\n 🤔🤔🤔 It's a draw 🤔🤔🤔 \n\n" << endl;
-        cout << "\n\n\n\n";
 }
     else if (player1>player2) {
-        cout << "\n\n\n\n";
         cout << "\n\n🥳🥳🥳 Player 1 wins! 🥳🥳🥳\n\n" << endl;
-        cout << "\n\n\n\n";
 
     } else {
-
-        cout << "\n\n\n\n";
         cout << "\n\n 😋😋😋 Player 2 wins! 😋😋😋\n\n" << endl;
-        cout << "\n\n\n\n";
     }
+    //Logging the scores
+    writeScores("Player1", player1.getScore(), "Player2", player2.getScore());
 }
