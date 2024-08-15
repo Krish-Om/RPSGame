@@ -45,13 +45,21 @@ void User_Player::setChoice() {
 
 void User_Player::roundWinner(int result, int i,User_Player& p1,User_Player& p2) {
     if (result == 0)
+    {
+        cout << "\n\n\n\n";
         cout << " 😅 Round " << i + 1 << ": is Draw!" << endl;
+        cout << "\n\n\n\n";
+    }
     else if (result == 1) {
+        cout << "\n\n\n\n";
         ++p1;
         cout<< "🤩 Round " << i + 1 << ": Player 1 wins!" << endl;
+        cout << "\n\n\n\n";
     } else {
+        cout << "\n\n\n\n";
         ++p2;
         cout << "🥲 Round " << i + 1 << ": Player 2 wins!" << endl;
+        cout << "\n\n\n\n";
     }
 }
 

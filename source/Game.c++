@@ -46,14 +46,22 @@ void scoreBoard(User_Player& p1, Bot& p2) {
     cout << "\n\nBot Score : " << p2.getScore() << endl;
 }
 void Game :: roundWinner(int res, int nround) {
-    if (res == 0)
+    if (res == 0){
+        cout << "\n\n\n\n";
         cout << " 😅 Round " << nround + 1 << ": is Draw!" << endl;
+        cout << "\n\n\n\n";
+        
+    }
     else if (res == 1) {
+        cout << "\n\n\n\n";
         ++player;
         cout << "🤩 Round " << nround + 1 << ": you won!" << endl;
+        cout << "\n\n\n\n";
     }else{
+        cout << "\n\n\n\n";
         ++bot;
         cout << "🥲 Round " << nround + 1 << ": you lose!" << endl;
+        cout << "\n\n\n\n";
     }
 }
 
@@ -196,21 +204,41 @@ void Game::playAgain() {
 
 void Game::determineWinner(User_Player player, Bot bot) {
     comparingScores();
-    if ((player == bot))
-        cout << "\n\n 🙃🙃🙃 It's a draw! 🙃🙃🙃 \n\n" << endl;
+    if ((player == bot)){
+
+        cout << "\n\n\n\n";
+        cout << "\n\n \t🙃🙃🙃 It's a draw! 🙃🙃🙃 \n\n" << endl;
+        cout << "\n\n\n\n";
+
+    }
     else if (player.getScore() > bot.getScore()) {
+        cout << "\n\n\n\n";
         cout << "\n\n 🥳🥳🥳 Player wins! 🥳🥳🥳\n\n " << endl;
+        cout << "\n\n\n\n";
+
     } else {
+        cout << "\n\n\n\n";
         cout << "\n\n\n 😎 🤖😎 Bot wins! 🤖😎🤖 \n\n\n " << endl;
+        cout << "\n\n\n\n";
+
     }
 }
 void Game::determineWinner(User_Player player1, User_Player player2) {
     comparingScores();
-    if (player1== player2)
+    if (player1== player2){
+        cout << "\n\n\n\n";
         cout << " \n\n 🤔🤔🤔 It's a draw 🤔🤔🤔 \n\n" << endl;
+        cout << "\n\n\n\n";
+}
     else if (player1>player2) {
+        cout << "\n\n\n\n";
         cout << "\n\n🥳🥳🥳 Player 1 wins! 🥳🥳🥳\n\n" << endl;
+        cout << "\n\n\n\n";
+
     } else {
+
+        cout << "\n\n\n\n";
         cout << "\n\n 😋😋😋 Player 2 wins! 😋😋😋\n\n" << endl;
+        cout << "\n\n\n\n";
     }
 }
