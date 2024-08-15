@@ -10,9 +10,12 @@ RPSGame is a Command Line Interface (CLI) based Rock-Paper-Scissors game. It sup
 - [Score History](#score-history)
 - [Contributing](#contributing)
 
-
 ## Score History
 The game stores the history of scores of the players who won the game in a file named `score_history.txt`. Each time a game is completed, the winner's score is appended to this file. The file is located in the same directory as the game executable.
+
+### `writeScores()` Function
+The `writeScores()` function is responsible for writing the winner's score to the `score_history.txt` file. It opens the file in append mode and writes the score after each game.
+
 ## Installation
 
 1. **Clone the repository:**
@@ -56,16 +59,13 @@ The game stores the history of scores of the players who won the game in a file 
   - `operator==(Players &p)`: Compares the scores of two players.
   - `operator>(Players &p)`: Checks if one player's score is greater than another's.
 
-
-- **User\_Player:** Derived class for human players.
+- **User_Player:** Derived class for human players.
   - `setChoice()`: Sets the player's choice based on user input.
   - `roundWinner(int result, int i, User_Player &p1, User_Player &p2)`: Determines the round winner.
-
 
 - **Bot:** Derived class for the bot player.
   - `setChoice()`: Sets the bot's choice randomly.
   - `setScore()`: Increments the bot's score.
-
 
 - **Game:** Manages the game flow.
   - `init()`: Initializes the game.
@@ -88,7 +88,15 @@ The game stores the history of scores of the players who won the game in a file 
 - `scoreBoard(User_Player &p1, User_Player &p2)`: Displays the scoreboard for multiplayer mode.
 - `scoreBoard(User_Player &p1, Bot &p2)`: Displays the scoreboard for single-player mode.
 - `comparingScores()`: Displays a loading bar while comparing scores.
-- `writeScores()` function is responsible for writing the winner's score to the `score_history.txt` file. It opens the file in append mode and writes the score after each game.
+- `writeScores(const string& player1, const int& score1, const string& player2, const int& score2)`: Writes the scores of the players to the `score_history.txt` file.
+
+### Utility Functions
+
+- `clearScreen()`: Clears the terminal screen.
+- `intro()`: Displays the game introduction.
+- `comparingScores()`: Displays a loading bar while comparing scores.
+- `writeScores(const string& player1, const int& score1, const string& player2, const int& score2)`: Writes the scores of the players to the `score_history.txt` file.
+
 ## Contributing
 
 Contributions are welcome! Please fork the repository and submit a pull request for any improvements or bug fixes.
