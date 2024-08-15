@@ -88,7 +88,7 @@ The game stores the history of scores of the players who won the game in a file 
 - `scoreBoard(User_Player &p1, User_Player &p2)`: Displays the scoreboard for multiplayer mode.
 - `scoreBoard(User_Player &p1, Bot &p2)`: Displays the scoreboard for single-player mode.
 - `comparingScores()`: Displays a loading bar while comparing scores.
-
+- `writeScores()` function is responsible for writing the winner's score to the `score_history.txt` file. It opens the file in append mode and writes the score after each game.
 ## Contributing
 
 Contributions are welcome! Please fork the repository and submit a pull request for any improvements or bug fixes.
