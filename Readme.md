@@ -7,8 +7,12 @@ RPSGame is a Command Line Interface (CLI) based Rock-Paper-Scissors game. It sup
 - [Usage](#usage)
 - [Game Modes](#game-modes)
 - [Classes and Functions](#classes-and-functions)
+- [Score History](#score-history)
 - [Contributing](#contributing)
 
+
+## Score History
+The game stores the history of scores of the players who won the game in a file named `score_history.txt`. Each time a game is completed, the winner's score is appended to this file. The file is located in the same directory as the game executable.
 ## Installation
 
 1. **Clone the repository:**

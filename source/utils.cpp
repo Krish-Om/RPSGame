@@ -49,7 +49,7 @@ void scoreBoard(User_Player& p1, Bot& p2) {
 
 void writeScores(const string& player1, const int& score1, const string& player2,const int& score2) {
     fstream file;
-    file.open("../scoreboard.txt", ios::app | ios::out); //append and write mode
+    file.open("../score_history.txt", ios::app | ios::out); //append and write mode
     if (!file.is_open()) {
         cerr << "Error: Unable to open file for writing score" << endl;
     } else { //is_open is a function that checks if the file is open
