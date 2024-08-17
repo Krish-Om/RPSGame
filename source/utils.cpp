@@ -54,7 +54,7 @@ void writeScores(const string& player1, const int& score1, const string& player2
         cerr << "Error: Unable to open file for writing score" << endl;
     } else { //is_open is a function that checks if the file is open
         time_t now = time(nullptr);
-        file << ctime(&now) << player1 << " : " << score1 << " " << player2 << " : " << score2 << endl;
+        file << "\n"<< ctime(&now)<< player1 << " : " << score1 << " " << player2 << " : " << score2 << endl;
         file.close();
     }
 }
