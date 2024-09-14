@@ -13,11 +13,7 @@ void start(){
 }
 
 void clearScreen() {
-    if (isatty(STDOUT_FILENO)) {
         system("clear || cls");
-    } else {
-        cerr << " No terminal detected " << endl;
-    }
 }
 
 void intro(){

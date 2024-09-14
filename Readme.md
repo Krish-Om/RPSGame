@@ -1,4 +1,4 @@
-# RPSGame
+****# RPSGame
 
 RPSGame is a Command Line Interface (CLI) based Rock-Paper-Scissors game. It supports both single-player (Player vs Bot) and multiplayer (Player vs Player) modes.
 

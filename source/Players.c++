@@ -7,9 +7,6 @@
 
 using namespace std;
 #include "../include/Players.hpp"
-// rock = 1 paper = 2 scissor = 3
-
-
     Players :: Players(){
         this->score = 0;
     }
@@ -55,13 +52,3 @@ bool Players::operator==(Players &p) {
 bool Players::operator>(Players &p) {
     return (this->score > p.score);
 }
-
-
-
-
-
-
-
-
-
-

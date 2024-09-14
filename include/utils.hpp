@@ -1,14 +1,15 @@
 
 #ifndef RPSGAME_UTILS_HPP
 #define RPSGAME_UTILS_HPP
-#include "ctime"
-#include "fstream"
-#include <cstdlib>
-#include "unistd.h"
+
+#include <fstream>
+#include <cstdlib> // for system("clear")
+#include "unistd.h" // for usleep and 
+#include "string"
 #include "iostream"
+
 #include "User_Player.hpp"
 #include "Bot.hpp"
-#include "string"
 using namespace std;
 void clearScreen();
 void scoreBoard(User_Player&, User_Player&);
